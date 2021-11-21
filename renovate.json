@@ -1,0 +1,15 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "platform": "github",
+  "repositories": [
+    "oliviermichaelis/aur-packages"
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": ["^kubent-bin/PKGBUILD$"],
+      "matchStrings" : ["pkgver=(?<currentValue>.*?)\n"],
+      "depNameTemplate": "doitintl/kube-no-trouble",
+      "datasourceTemplate": "github-releases"
+    }
+  ]
+}

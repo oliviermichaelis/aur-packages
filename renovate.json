@@ -10,6 +10,12 @@
       "matchStrings" : ["pkgver=(?<currentValue>.*?)\n"],
       "depNameTemplate": "doitintl/kube-no-trouble",
       "datasourceTemplate": "github-releases"
+    },
+    {
+      "fileMatch": ["^sloth-bin/PKGBUILD$"],
+      "matchStrings" : ["pkgver=(?<currentValue>.*?)\n"],
+      "depNameTemplate": "slok/sloth",
+      "datasourceTemplate": "github-releases"
     }
   ]
 }

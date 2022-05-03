@@ -5,7 +5,9 @@ Packages maintained by me
 
 ```bash
 mkdir <pkgname>
-touch PKGDIR .SRCINFO
+touch ${pkgname}/PKGDIR ${pkgname}/.SRCINFO
+git commit
+aurpublish ${pkgname}
 ```
 
 ## Update instructions

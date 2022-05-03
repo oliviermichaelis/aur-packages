@@ -16,6 +16,12 @@
       "matchStrings" : ["pkgver=(?<currentValue>.*?)\n"],
       "depNameTemplate": "slok/sloth",
       "datasourceTemplate": "github-releases"
+    },
+    {
+      "fileMatch": ["^spacectl-bin/PKGBUILD$"],
+      "matchStrings" : ["pkgver=(?<currentValue>.*?)\n"],
+      "depNameTemplate": "spacelift-io/spacectl",
+      "datasourceTemplate": "github-releases"
     }
   ]
 }

@@ -1,6 +1,13 @@
 # aur-packages
 Packages maintained by me
 
+## Create new package
+
+```bash
+mkdir <pkgname>
+touch PKGDIR .SRCINFO
+```
+
 ## Update instructions
 
 * Change `pkgver` in `PKGBUILD

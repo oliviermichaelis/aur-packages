@@ -7,3 +7,6 @@ src
 # binaries
 *-x86_64
 *-aarch64
+*-arm
+*-armv6h
+*-armv7h

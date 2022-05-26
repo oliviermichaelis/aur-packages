@@ -22,6 +22,18 @@
       "matchStrings" : ["pkgver=(?<currentValue>.*?)\n"],
       "depNameTemplate": "spacelift-io/spacectl",
       "datasourceTemplate": "github-releases"
+    },
+    {
+      "fileMatch": ["^linkerd-bin/PKGBUILD$"],
+      "matchStrings" : ["pkgver=(?<currentValue>.*?)\n"],
+      "depNameTemplate": "linkerd/linkerd2",
+      "datasourceTemplate": "github-releases"
+    }
+  ],
+  "packageRules": [
+    {
+      "matchPackageNames": ["linkerd/linkerd2"],
+      "extractVersion": "^stable-(?<version>.*)$"
     }
   ]
 }

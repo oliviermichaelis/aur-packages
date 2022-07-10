@@ -1,5 +1,6 @@
 # aur-packages
-Packages maintained by me
+
+Packages maintained by myself
 
 ## Create new package
 
@@ -22,4 +23,5 @@ aurpublish ${pkgname}
 * `yay -U <package>.pkg.tar.zst`
 
 ### Push changes
+
 * After making the change and committing, just `aurpublish <package_name>`

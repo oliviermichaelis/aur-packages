@@ -13,7 +13,7 @@ aurpublish ${pkgname}
 
 ## Update instructions
 
-* Change `pkgver` in `PKGBUILD
+* Change `pkgver` in `PKGBUILD`
 * Regenerate checksum with `updpkgsums`
 * Update `.SRCINFO` with `makepkg --printsrcinfo > .SRCINFO`
 

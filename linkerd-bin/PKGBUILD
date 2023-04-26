@@ -1,7 +1,7 @@
 # Maintainer: Olivier Michaelis <michaelis.olivier [at] gmail [dot] com>
 
 pkgname=linkerd-bin
-pkgver=2.13.1
+pkgver=2.13.2
 pkgrel=1
 pkgdesc="Ultralight, security-first service mesh for Kubernetes. Main repo for Linkerd 2.x"
 arch=('x86_64' 'arm' 'armv6h' 'armv7h' 'aarch64')

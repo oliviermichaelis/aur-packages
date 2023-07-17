@@ -6,28 +6,11 @@
   ],
   "regexManagers": [
     {
-      "fileMatch": ["^kubent-bin/PKGBUILD$"],
-      "matchStrings" : ["pkgver=(?<currentValue>.*?)\n"],
-      "depNameTemplate": "doitintl/kube-no-trouble",
-      "datasourceTemplate": "github-releases"
-    },
-    {
-      "fileMatch": ["^sloth-bin/PKGBUILD$"],
-      "matchStrings" : ["pkgver=(?<currentValue>.*?)\n"],
-      "depNameTemplate": "slok/sloth",
-      "datasourceTemplate": "github-releases"
-    },
-    {
-      "fileMatch": ["^spacectl-bin/PKGBUILD$"],
-      "matchStrings" : ["pkgver=(?<currentValue>.*?)\n"],
-      "depNameTemplate": "spacelift-io/spacectl",
-      "datasourceTemplate": "github-releases"
-    },
-    {
-      "fileMatch": ["^linkerd-bin/PKGBUILD$"],
-      "matchStrings" : ["pkgver=(?<currentValue>.*?)\n"],
-      "depNameTemplate": "linkerd/linkerd2",
-      "datasourceTemplate": "github-releases"
+      "fileMatch": ["(^|/)PKGBUILD$"],
+      "matchStrings": [
+        "pkgver=(?<currentValue>.*) # renovate: datasource=(?<datasource>.*) depName=(?<depName>.*)"
+      ],
+      "extractVersionTemplate": "^v?(?<version>.*)$"
     }
   ],
   "packageRules": [

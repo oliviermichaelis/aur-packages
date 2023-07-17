@@ -11,7 +11,7 @@ depends=('glibc')
 
 source_x86_64=("eks-node-viewer-${pkgver}-x86_64::https://github.com/awslabs/eks-node-viewer/releases/download/v${pkgver}/eks-node-viewer_Linux_x86_64")
 
-sha256sums_x86_64=('ec36a5070b03a21ba88e98d24f3cf98337fe90a89b0f430848433908164c8c0f')
+sha256sums_x86_64=('1a9483acea1595949fb3d476fc0faae4c2ed5fae771b478a856b6090324c3930')
 
 package() {
     install -Dm755 eks-node-viewer-${pkgver}-${arch} "${pkgdir}/usr/bin/eks-node-viewer"

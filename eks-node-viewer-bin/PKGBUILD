@@ -1,7 +1,7 @@
 # Maintainer: Olivier Michaelis <michaelis.olivier [at] gmail [dot] com>
 
 pkgname=eks-node-viewer-bin
-pkgver=0.5.0 # renovate: datasource=github-releases depName=awslabs/eks-node-viewer
+pkgver=0.6.0 # renovate: datasource=github-releases depName=awslabs/eks-node-viewer
 pkgrel=1
 pkgdesc="A tool to visualize dynamic node usage within an AWS EKS Kubernetes cluster"
 arch=('x86_64')

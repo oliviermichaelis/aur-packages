@@ -1,7 +1,7 @@
 # Maintainer: Olivier Michaelis <michaelis.olivier [at] gmail [dot] com>
 
 pkgname=spacectl-bin
-pkgver=v0.29.0 # renovate: datasource=github-releases depName=spacelift-io/spacectl vPrefix=true
+pkgver=v0.30.0 # renovate: datasource=github-releases depName=spacelift-io/spacectl vPrefix=true
 pkgrel=1
 pkgdesc="Spacelift client and CLI"
 arch=('x86_64' 'aarch64')

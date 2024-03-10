@@ -8,7 +8,7 @@ arch=('x86_64')
 url="https://github.com/doitintl/kube-no-trouble"
 license=('MIT')
 source=(https://github.com/doitintl/kube-no-trouble/releases/download/$pkgver/kubent-$pkgver-linux-amd64.tar.gz)
-md5sums=('53666894b7bb4fa004b714ba3847c6d9')
+md5sums=('9ac2b0300108216034592ab2b2508c24')
 
 package() {
   install -Dm755 kubent -t "$pkgdir/usr/bin"

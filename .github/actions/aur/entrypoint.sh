@@ -2,7 +2,12 @@
 set -euo pipefail
 
 echo "::group::Updating"
-paru -Syu --noconfirm
+sudo pacman -Syu --noconfirm
+echo "::endgroup::"
+
+echo "::group::Installing paru"
+git clone https://aur.archlinux.org/paru-bin.git
+cd paru-bin && makepkg -si --noconfirm && cd ..
 echo "::endgroup::"
 
 # Set path

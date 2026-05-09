@@ -22,10 +22,6 @@ cp -rfv "$GITHUB_WORKSPACE"/.git ./
 cp -fv "$WORKPATH"/PKGBUILD ./
 echo "::endgroup::"
 
-echo "::group::Updating archlinux-keyring"
-sudo pacman -S --noconfirm archlinux-keyring
-echo "::endgroup::"
-
 echo "::group::Updating checksums on PKGBUILD"
 updpkgsums
 git diff PKGBUILD

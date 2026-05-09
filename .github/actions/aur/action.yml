@@ -1,7 +1,5 @@
-# source: https://github.com/JamieMagee/aur-packages/blob/main/.github/actions/aur/action.yml
 name: 'Arch Linux User Repository (AUR) GitHub Action'
 description: ''
-author: 'JamieMagee'
 branding:
   icon: 'package'
   color: 'blue'
@@ -15,8 +13,26 @@ inputs:
     required: true
 
 runs:
-  using: docker
-  image: 'Dockerfile'
-  args:
-    - ${{ inputs.action }}
-    - ${{ inputs.pkgname }}
+  using: composite
+  steps:
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+
+    - name: Build image
+      uses: docker/build-push-action@v6
+      with:
+        context: ${{ github.action_path }}
+        load: true
+        tags: aur-action:latest
+        cache-from: type=gha
+        cache-to: type=gha,mode=max
+
+    - name: Run
+      shell: bash
+      run: |
+        docker run --rm \
+          -v "$GITHUB_WORKSPACE":"$GITHUB_WORKSPACE" \
+          -e GITHUB_WORKSPACE="$GITHUB_WORKSPACE" \
+          -e INPUT_PKGNAME="${{ inputs.pkgname }}" \
+          aur-action:latest \
+          "${{ inputs.action }}" "${{ inputs.pkgname }}"

@@ -1,15 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-echo "::group::Updating"
-sudo pacman -Syu --noconfirm
-echo "::endgroup::"
-
-echo "::group::Installing paru"
-git clone https://aur.archlinux.org/paru.git
-cd paru && makepkg -si --noconfirm && cd ..
-echo "::endgroup::"
-
 # Set path
 WORKPATH=$GITHUB_WORKSPACE/$INPUT_PKGNAME
 HOME=/home/builder

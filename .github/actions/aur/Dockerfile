@@ -8,6 +8,9 @@ RUN pacman -Syu --needed --noconfirm pacman-contrib namcap git sudo unzip && \
 WORKDIR /home/builder
 USER builder
 
+RUN git clone https://aur.archlinux.org/paru.git && \
+  cd paru && makepkg -si --noconfirm && cd .. && rm -rf paru
+
 COPY entrypoint.sh /entrypoint.sh
 
 ENTRYPOINT [ "/entrypoint.sh" ]

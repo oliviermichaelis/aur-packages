@@ -2,7 +2,7 @@
 set -euo pipefail
 
 echo "::group::Updating"
-sudo pacman -Syu --noconfirm
+paru -Syu --noconfirm
 echo "::endgroup::"
 
 # Set path

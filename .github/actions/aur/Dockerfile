@@ -1,5 +1,5 @@
 # Source: https://github.com/JamieMagee/aur-packages/blob/main/.github/actions/aur/Dockerfile
-FROM docker.io/library/archlinux:base-devel@sha256:dbe52370858ec341af9035cb657939eb912a7b825899cd766f01bc5a775587db
+FROM docker.io/library/archlinux:base-devel@sha256:f557e49eaad9b696f0ef71cd12f2a2418407c8d4c441f311c38bd95186afd85f
 
 RUN pacman -Syu --needed --noconfirm pacman-contrib namcap git sudo unzip && \
   useradd -m builder && \

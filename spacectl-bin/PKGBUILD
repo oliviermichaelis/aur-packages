@@ -11,8 +11,8 @@ license=('MIT')
 source_x86_64=(spacectl-${pkgver}-x86_64::https://github.com/spacelift-io/spacectl/releases/download/${pkgver}/spacectl_${pkgver//v}_linux_amd64.zip)
 source_aarch64=(spacectl-${pkgver}-aarch64::https://github.com/spacelift-io/spacectl/releases/download/${pkgver}/spacectl_${pkgver//v}_linux_arm64.zip)
 
-sha256sums_x86_64=('88862d6115f4f7fbd29e9991d85f72d816ff8e3ee85a6b6d441d20bc5b217599')
-sha256sums_aarch64=('3149296771650a5306634b06ab192a44c31585be759e47362b3b9d3c971c95a1')
+sha256sums_x86_64=('ed52817e81d55cca51b03e580b62238f1f4902163581a339b6414bdb47a35671')
+sha256sums_aarch64=('a053b33077e8776eaa639ac9d73238dcf90aa4d6ddbf58c60d18ecded8c24d3d')
 
 package() {
   unzip -o spacectl-${pkgver}-${arch} spacectl
